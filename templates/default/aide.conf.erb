@@ -9,7 +9,7 @@ report_url=<%= node['aide']['report_url'] %>
 <%= name %> = <%= definition %>
 <% end -%>
 
-<% node['aide']['paths'].each do |path,definition|
+<% @paths.each do |path,definition|
      if definition == '!' -%>
 !<%= path %>
   <% else -%>

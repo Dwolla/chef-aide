@@ -3,6 +3,7 @@ package 'aide' do
 end
 
 template node['aide']['config'] do
+  variables :paths => node['aide']['paths']
   notifies :run, 'bash[generate_database]', :delayed
 end
 
