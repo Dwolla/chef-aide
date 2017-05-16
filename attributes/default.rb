@@ -15,7 +15,7 @@ default['aide']['report_url'] = 'stdout'
 default['aide']['verbose'] = '5'
 
 case node['platform_family']
-when 'rhel'
+when 'rhel', 'amazon'
   default['aide']['binary'] = '/usr/sbin/aide'
   default['aide']['config'] = '/etc/aide.conf'
   default['aide']['extra_parameters'] = ''
